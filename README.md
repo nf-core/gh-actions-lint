@@ -6,11 +6,11 @@ GitHub action for nf-core
 
 ### `nextflow_version`
 
-[Nextflow](https://www.nextflow.io/) version. Default=20.04.1
+[Nextflow](https://www.nextflow.io/) version. Default: install latest version
 
 ### `nfcore_version`
 
-[nf-core tools](https://github.com/nf-core/tools/) version. Default= 1.9
+[nf-core tools](https://github.com/nf-core/tools/) version. Default: install latest version
 
 ## Example usage
 

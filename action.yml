@@ -7,10 +7,10 @@ branding:
 inputs:
   nextflow_version:
     description: 'Nextflow version'
-    default: '20.04.01'
+    default: ''
   nfcore_version:
     description: 'nf-core tools version'
-    default: '1.9'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
