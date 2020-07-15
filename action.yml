@@ -1,0 +1,19 @@
+name: 'Github action for nf-core CI'
+description: 'Install nf-core CI tools and performs linting'
+author: 'Maxime Borry'
+branding:
+  icon: 'tool'  
+  color: 'green'
+inputs:
+  nextflow_version:
+    description: 'Nextflow version'
+    default: '20.04.01'
+  nfcore_version:
+    description: 'nf-core tools version'
+    default: '1.9'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.nextflow_version }}
+    - ${{ inputs.nfcore_version }}
