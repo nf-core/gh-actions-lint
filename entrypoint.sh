@@ -4,11 +4,11 @@ set -ex
 set -o pipefail
 
 install_nextflow(){
-    conda install -c bioconda nextflow=${NEXTFLOW_VERSION}
+    conda install -c bioconda nextflow=${INPUT_NEXTFLOW_VERSION}
 }
 
 install_nf_core_tools(){
-    pip install nf-core==${NFCORE_VERSION}
+    pip install nf-core==${INPUT_NFCORE_VERSION}
 }
 
 nf-core-lint() {
