@@ -15,7 +15,7 @@ GitHub action for nf-core
 ## Example usage
 
 ```bash
-name: nf-core  CI
+name: nf-core CI
 
 on: [push, pull_request]
     
@@ -26,4 +26,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: nf-core CI
       uses: maxibor/nf-core-gh-action@master
+      with:
+          nextflow_version: '20.04.1'
+          nfcore_version: '1.9'
 ```
