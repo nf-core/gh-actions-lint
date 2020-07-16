@@ -17,15 +17,15 @@ inputs:
     description: 'nf-core linting mode'
     required: false
     default: ''
-  gh_comments_url: 
+  GITHUB_COMMENTS_URL: 
     description: 'PR comments URL'
     required: false
     default: ''
-  gh_token: 
+  GITHUB_TOKEN: 
     description: 'Github Token'
     required: false
     default: ''
-  gh_pr_commit: 
+  GITHUB_PR_COMMIT: 
     description: ''
     required: false
     default: ''

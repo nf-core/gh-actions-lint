@@ -31,12 +31,6 @@ nf-core-lint() {
     fi
 }
 
-echo $INPUT_GH_COMMENTS_URL
-echo $INPUT_GH_TOKEN
-echo $INPUT_GH_PR_COMMIT
-echo $INPUT_NEXTFLOW_VERSION
-echo "TEST"
-
 install_nextflow
 install_nf_core_tools
 nf-core-lint
