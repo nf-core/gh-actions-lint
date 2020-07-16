@@ -17,3 +17,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    GITHUB_COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    GITHUB_PR_COMMIT: ${{ github.event.pull_request.head.sha }}
