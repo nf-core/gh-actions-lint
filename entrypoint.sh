@@ -39,3 +39,4 @@ nf-core-lint
 echo $GITHUB_COMMENTS_URL
 echo $GITHUB_TOKEN
 echo $GITHUB_PR_COMMIT
+echo "TEST"
