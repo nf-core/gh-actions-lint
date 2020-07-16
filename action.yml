@@ -11,6 +11,9 @@ inputs:
   nfcore_version:
     description: 'nf-core tools version'
     default: ''
+  mode:
+    description: 'nf-core linting mode'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'

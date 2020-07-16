@@ -22,5 +22,16 @@ install_nf_core_tools(){
     fi
 }
 
+nf-core-lint() {
+    if [$INPUT_MODE == "release"]
+    then
+        nf-core lint --release ${GITHUB_WORKSPACE}
+    else
+        nf-core lint ${GITHUB_WORKSPACE}
+    fi
+}
+
+
 install_nextflow
 install_nf_core_tools
+nf-core-lint
