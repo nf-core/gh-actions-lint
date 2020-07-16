@@ -23,21 +23,21 @@ install_nf_core_tools(){
 }
 
 nf-core-lint() {
-    if ["$INPUT_MODE" = "release"]
+    if [ -z "$INPUT_NFCORE_VERSION" ]
     then
-        nf-core lint --release ${GITHUB_WORKSPACE}
-    else
         nf-core lint ${GITHUB_WORKSPACE}
+    else
+        nf-core lint --release ${GITHUB_WORKSPACE}
     fi
 }
-
-
-install_nextflow
-install_nf_core_tools
-nf-core-lint
 
 echo $INPUT_GH_COMMENTS_URL
 echo $INPUT_GH_TOKEN
 echo $INPUT_GH_PR_COMMIT
 echo $INPUT_NEXTFLOW_VERSION
 echo "TEST"
+
+install_nextflow
+install_nf_core_tools
+nf-core-lint
+
