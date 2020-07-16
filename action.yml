@@ -7,17 +7,28 @@ branding:
 inputs:
   nextflow_version:
     description: 'Nextflow version'
+    required: false
     default: ''
   nfcore_version:
     description: 'nf-core tools version'
+    required: false
     default: ''
   mode:
     description: 'nf-core linting mode'
+    required: false
     default: ''
+  gh_comments_url: 
+    description: 'PR comments URL'
+    required: false
+    default: ${{ github.event.pull_request.comments_url }}
+  gh_token: 
+    description: 'Github Token'
+    required: false
+    default: ${{ secrets.GITHUB_TOKEN }}
+  gh_pr_commit: 
+    description: 'Github pull request SHA'
+    required: false
+    default: ${{ github.event.pull_request.head.sha }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    GITHUB_COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    GITHUB_PR_COMMIT: ${{ github.event.pull_request.head.sha }}
