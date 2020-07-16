@@ -23,7 +23,7 @@ install_nf_core_tools(){
 }
 
 nf-core-lint() {
-    if [$INPUT_MODE == "release"]
+    if ["$INPUT_MODE" = "release"]
     then
         nf-core lint --release ${GITHUB_WORKSPACE}
     else
@@ -39,3 +39,4 @@ nf-core-lint
 echo $GITHUB_COMMENTS_URL
 echo $GITHUB_TOKEN
 echo $GITHUB_PR_COMMIT
+echo "TEST"
