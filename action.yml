@@ -24,7 +24,7 @@ inputs:
   gh_token: 
     description: 'Github Token'
     required: false
-    default: ${{ secrets.SuperSecret }}
+    default: ''
   gh_pr_commit: 
     description: 'Github pull request SHA'
     required: false
