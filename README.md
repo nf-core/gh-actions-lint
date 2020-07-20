@@ -36,7 +36,7 @@ Default: `''`
 
 ## Example usage
 
-```bash
+```yaml
 name: nf-core  CI
 
 on: [push, pull_request]
