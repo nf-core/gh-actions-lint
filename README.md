@@ -1,6 +1,6 @@
-# nf-core-gh-action
+# gh-actions-lint
 
-GitHub action for nf-core
+GitHub action for linting nf-core pipelines with [nf-core tools](https://github.com/nf-core/tools/)
 
 ## Inputs
 
