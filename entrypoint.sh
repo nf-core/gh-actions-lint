@@ -23,7 +23,7 @@ install_nf_core_tools(){
 }
 
 nf-core-lint() {
-    if [ "$MODE" == "release" ]
+    if [ "$INPUT_MODE" == "release" ]
     then
         nf-core lint ${GITHUB_WORKSPACE}
     else
