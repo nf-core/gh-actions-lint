@@ -2,7 +2,7 @@ name: 'Github action for nf-core CI'
 description: 'Install nf-core CI tools and performs linting'
 author: 'Maxime Borry'
 branding:
-  icon: 'tool'  
+  icon: 'tool'
   color: 'green'
 inputs:
   nextflow_version:
@@ -17,15 +17,15 @@ inputs:
     description: 'nf-core linting mode'
     required: false
     default: ''
-  GITHUB_COMMENTS_URL: 
+  GITHUB_COMMENTS_URL:
     description: 'PR comments URL'
     required: false
     default: ''
-  GITHUB_TOKEN: 
+  GITHUB_TOKEN:
     description: 'Github Token'
     required: false
     default: ''
-  GITHUB_PR_COMMIT: 
+  GITHUB_PR_COMMIT:
     description: ''
     required: false
     default: ''

@@ -10,7 +10,7 @@ install_nextflow(){
     else
         conda install -c bioconda nextflow=${INPUT_NEXTFLOW_VERSION}
     fi
-    
+
 }
 
 install_nf_core_tools(){
@@ -23,7 +23,7 @@ install_nf_core_tools(){
 }
 
 nf-core-lint() {
-    if [ -z "$INPUT_NFCORE_VERSION" ]
+    if [ "$INPUT_MODE" == "release" ]
     then
         nf-core lint ${GITHUB_WORKSPACE}
     else
@@ -34,4 +34,3 @@ nf-core-lint() {
 install_nextflow
 install_nf_core_tools
 nf-core-lint
-
